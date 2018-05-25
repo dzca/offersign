@@ -1,6 +1,4 @@
 <template>
-
-
     <el-row>
       <el-col :span="10"><img src="@/assets/imgs/nths_logo.jpg"/></el-col>
       <el-col :span="14" class='menu'>
@@ -19,8 +17,6 @@
         </el-menu>
       </el-col>
     </el-row>
-
-
 </template>
 
 <script>
@@ -38,7 +34,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .el-header {
   height: 84px;
   // background-color: #b3c0d1;
@@ -49,7 +45,6 @@ export default {
 
 .menu {
   // float: right;
-
   margin-top: 57px;
 }
 
@@ -59,7 +54,7 @@ export default {
 }
 
 .menu li a {
-  color: #ffffff;
+  // color: #ffffff;
   text-decoration: none;
 }
 </style>
