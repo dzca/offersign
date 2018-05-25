@@ -1,6 +1,6 @@
 <template>
     <el-row>
-      <el-col :span="10"><img src="@/assets/imgs/nths_logo.jpg"/></el-col>
+      <el-col :span="10"><img src="@/assets/logo-140x80.jpg"/></el-col>
       <el-col :span="14" class='menu'>
 
         <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
