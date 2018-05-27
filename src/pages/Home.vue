@@ -3,7 +3,7 @@
 	<div class="banner-image">
 
 		<div class="centered-image-text">
-			<h1 class="font-weight-bold bg-text-inner">Electronic signatures<br> <small class="text-muted font-weight-bold"> for online legally binding</small></h1>
+			<h2 class="font-weight-bold bg-text-inner">Electronic signatures<br> <small class="text-muted font-weight-bold"> for online legally binding</small></h2>
 		</div>
 
 	</div>
