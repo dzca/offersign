@@ -1,60 +1,77 @@
-<template>
-    <el-row>
-      <el-col :span="10"><img src="@/assets/logo-140x80.jpg"/></el-col>
-      <el-col :span="14" class='menu'>
+<style lang="scss" scoped>
+.header {
+  height: 63px;
+  margin: 7px;
+}
 
-        <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-            <el-menu-item index="1">
-              <router-link to="/">Home</router-link>
-            </el-menu-item>
-            <el-menu-item index="2">
-              <router-link to="/services">Services</router-link>
-            </el-menu-item>
-            <el-menu-item index="3"><router-link to="/contacts">Contacts</router-link>
-          </el-menu-item>
-            <el-menu-item index="4"><router-link to="/about">About</router-link>
-          </el-menu-item>
-        </el-menu>
-      </el-col>
-    </el-row>
+.navbar-nav {
+  font-size: 14px;
+  .nav-item {
+    margin-right: 30px;
+  }
+}
+
+ul > li {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+// ul > li > a {
+//   color: #000000;
+// }
+//
+// ul > li a {
+//   color: none;
+// }
+
+ul > li a:hover,
+a.active {
+  border-bottom: 2px solid #cd2530;
+  color: #428bca;
+}
+</style>
+
+<template>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#/">
+            <img src="@/assets/imgs/offersign-logo-105x60.png" />
+        </a>
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" v-on:click="setActive('feature')" :class="{ active: isActive('feature') }">Features</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" v-on:click="setActive('pricing')" :class="{ active: isActive('pricing') }">Pricing</a>
+            </li>
+
+            <button class="btn btn-sm btn-danger" type="button">Login</button>
+        </ul>
+    </div>
+</nav>
+
 </template>
 
 <script>
 export default {
   data() {
     return {
-      activeIndex: "1"
+      activeItem: this.$route.name
     };
   },
+  computed: {},
   methods: {
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath);
+    isActive: function(menuItem) {
+      return this.activeItem === menuItem;
+    },
+    setActive: function(menuItem) {
+      this.activeItem = menuItem; // no need for Vue.set()
+      this.$router.push({
+        name: menuItem
+      });
     }
   }
 };
 </script>
-
-<style lang="scss" scoped>
-.el-header {
-  height: 84px;
-  // background-color: #b3c0d1;
-  // color: #333;
-  // text-align: center;
-  // line-height: 60px;
-}
-
-.menu {
-  // float: right;
-  margin-top: 57px;
-}
-
-.el-menu--horizontal > .el-menu-item {
-  height: 30px;
-  line-height: 30px;
-}
-
-.menu li a {
-  // color: #ffffff;
-  text-decoration: none;
-}
-</style>
