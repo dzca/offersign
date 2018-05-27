@@ -1,8 +1,10 @@
 <template>
 <div>
-	<div class="ad-image">
-		<img src="@/assets/imgs/computer.jpg" class="img-fluid" alt="Responsive image">
-		<div class="centered-image-text">Centered</div>
+	<div class="banner-image">
+		<div class="centered-image-text">
+			<h1 class="text-justify font-weight-bold">Online Electronic signatures<br> <small class="text-muted font-weight-bold"> for legally binding</small></h1>
+
+		</div>
 	</div>
 
 
@@ -110,8 +112,13 @@ export default {
   padding-bottom: 20px;
 }
 
-.ad-image {
-  // margin: 0px 15px;
+.banner-image {
+  background: #000 url(../assets/imgs/computer-bg-2000x630.png) no-repeat center
+    center;
+  // background-size: 100% auto;
+  height: 460px;
+  // position: relative;
+  width: 100% !important;
 
   .centered-image-text {
     position: absolute;

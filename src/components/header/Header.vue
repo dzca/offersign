@@ -1,6 +1,6 @@
 <style lang="scss" scoped>
 .header {
-  height: 63px;
+  // height: 50px;
   margin: 7px;
 }
 
