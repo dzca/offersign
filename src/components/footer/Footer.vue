@@ -1,6 +1,6 @@
 <template>
 
-  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+  <div class="pt-4 my-md-5 pt-md-5 border-top container">
     <div class="row">
       <div class="col-12 col-md">
         <img class="mb-2" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="24" height="24">
@@ -36,7 +36,7 @@
         </ul>
       </div>
     </div>
-  </footer>
+  </div>
 
 </template>
 

@@ -5,7 +5,7 @@
 		<div>
 	  	<router-view/>
 		</div>
-
+		<Footer/>
 	</div>
 
 </template>
@@ -24,4 +24,8 @@ export default {
 
 <style lang="scss">
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+.contents {
+  margin-top: 20px;
+}
 </style>
