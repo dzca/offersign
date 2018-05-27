@@ -1,12 +1,12 @@
 <template>
 <div>
 	<div class="banner-image">
+
 		<div class="centered-image-text">
-			<h1 class="text-justify font-weight-bold">Online Electronic signatures<br> <small class="text-muted font-weight-bold"> for legally binding</small></h1>
-
+			<h1 class="font-weight-bold bg-text-inner">Electronic signatures<br> <small class="text-muted font-weight-bold"> for online legally binding</small></h1>
 		</div>
-	</div>
 
+	</div>
 
 	    <div class="container">
 	      <div class="card-deck mb-3 text-center">
@@ -116,15 +116,17 @@ export default {
   background: #000 url(../assets/imgs/computer-bg-2000x630.png) no-repeat center
     center;
   // background-size: 100% auto;
-  height: 460px;
-  // position: relative;
-  width: 100% !important;
+  // top: 50%;
+  // height: image-height("../assets/imgs/computer-bg-2000x630.png");
+  // width: image-width("../assets/imgs/computer-bg-2000x630.png");
+  // width: 100% !important;
+  text-align: center;
 
   .centered-image-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    // height: 460px;
+    padding-top: 10%;
+    padding-bottom: 10%;
   }
 }
 
